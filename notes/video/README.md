@@ -1,3 +1,9 @@
+# Video
+
+## Table of contents
+
+[Cut video from min X to min Y](#cut-video-from-min-x-to-min-y)
+
 ### **Cut video from min X to min Y**
 
 ```bash
