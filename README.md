@@ -4,15 +4,12 @@ Repository with notes, scrips and one liners that more than once helped me someh
 
 ### Artcles
 
-General articles that talk about a given subject with good examples and provide a clear explanation about it
-[articles](/articles/README.md)
+General [articles](/articles/README.md) that talk about a given subject with good examples and provide a clear explanation about it
 
 ### Notes
 
-General knowledge and reference notes. Hosts one-liner commands as well.
-[notes](/notes/README.md)
+General knowledge and reference [notes](/notes/README.md). Hosts one-liner commands as well.
 
 ### Scrips
 
-Scripts to do very specific tasks
-[scripts](/scrips/README.md)
+[scripts](/scrips/README.md) to do very specific tasks
