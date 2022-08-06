@@ -1,3 +1,3 @@
 ## Nodes
 
-[videos](/video/README.md)
+[videos](/notes/video/README.md)
