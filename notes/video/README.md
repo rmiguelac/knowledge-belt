@@ -3,6 +3,7 @@
 ## Table of contents
 
 [Cut video from min X to min Y](#cut-video-from-min-x-to-min-y)
+[Convert to mp4](#convert-to-mp4)
 
 ### **Cut video from min X to min Y**
 
@@ -15,4 +16,11 @@ date -d@${SECS} -u +%H:%M:%S
 
 # Actual cut from the start to minute 2 and 20 seconds
 ffmpeg -i x.mp4 -ss 00:00:00 -to 00:02:20 -c:v copy -c:a copy output.mp4
+```
+
+### Convert to mp4
+
+```
+ffmpeg -loglevel quiet -i input.mpeg -c copy output.mp4
+
 ```
