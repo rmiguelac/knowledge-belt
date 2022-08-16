@@ -1,4 +1,4 @@
 ## Notes
 
-[kubernetes](/notes/kubernetes/README.md)
+[kubernetes](/notes/kubernetes/README.md)   
 [videos](/notes/video/README.md)

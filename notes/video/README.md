@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-[Cut video from min X to min Y](#cut-video-from-min-x-to-min-y)
+[Cut video from min X to min Y](#cut-video-from-min-x-to-min-y)  
 [Convert to mp4](#convert-to-mp4)
 
 ### **Cut video from min X to min Y**
