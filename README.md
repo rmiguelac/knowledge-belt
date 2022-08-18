@@ -8,7 +8,11 @@ General [articles](/articles/README.md) that talk about a given subject with goo
 
 ### Notes
 
-General knowledge and reference [notes](/notes/README.md). Hosts one-liner commands as well.
+General knowledge and reference [notes](/notes/README.md).
+
+
+### One-Liners
+Small commands, usually [one-liners](/one-liners/README.md).
 
 ### Scrips
 
