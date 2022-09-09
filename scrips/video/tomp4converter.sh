@@ -13,7 +13,7 @@ convert() {
 	    echo "[INFO] Converting ${v}"
 		temp=${v/mp4/mp2t}
 		# Check if we converted already - idempotent
-		if is_file_open(${v}); then
+		if is_file_open ${v} ; then
 			echo "[INFO] ${v} is busy. Skipping it..."
 			continue
 		fi
@@ -32,12 +32,12 @@ convert() {
 is_file_open() {
 	# If the file is open, we do not want to move it around
 	REC_FILE=$1
-	lsof -f -- $REC_FILE
+	lsof -f -- $REC_FILE &> /dev/null
 	if [[ $? == 0 ]]; then
-		return true
+		return 0
 	fi
 
-	return false
+	return 1
 }
 
 main() {
