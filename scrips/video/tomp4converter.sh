@@ -12,9 +12,9 @@ convert() {
 	for v in ${REC_VIDS}; do
 	    echo "[INFO] Converting ${v}"
 		temp=${v/mp4/mp2t}
-        mv ${v} ${temp}
 		# Check if we converted already - idempotent
-		if [[ ! "$(file --mime-type | awk '{print $2}' | cut -d'/' -f2)" == "mp4" ]]; then
+		if [[ ! "$(file --mime-type ${v} | awk '{print $2}' | cut -d'/' -f2)" == "mp4" ]]; then
+        		mv ${v} ${temp}
 			echo "[INFO] Mime check done. Will convert."
 	    	ffmpeg -loglevel quiet -i ${temp} -c copy ${v}
         	if [ $? -eq 0 ]; then
