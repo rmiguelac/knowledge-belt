@@ -13,6 +13,10 @@ convert() {
 	    echo "[INFO] Converting ${v}"
 		temp=${v/mp4/mp2t}
 		# Check if we converted already - idempotent
+		if is_file_open(${v}); then
+			echo "[INFO] ${v} is busy. Skipping it..."
+			continue
+		fi
 		if [[ ! "$(file --mime-type ${v} | awk '{print $2}' | cut -d'/' -f2)" == "mp4" ]]; then
         		mv ${v} ${temp}
 			echo "[INFO] Mime check done. Will convert."
@@ -23,6 +27,17 @@ convert() {
         	fi
 		fi
 	done
+}
+
+is_file_open() {
+	# If the file is open, we do not want to move it around
+	REC_FILE=$1
+	lsof -f -- $REC_FILE
+	if [[ $? == 0 ]]; then
+		return true
+	fi
+
+	return false
 }
 
 main() {
