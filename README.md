@@ -1,6 +1,6 @@
-# Dumps
+# Knowlegde Belt
 
-Repository with notes, scrips and one liners that more than once helped me somehow.
+Repository with interesting articles, notes, scrips and one liners that more than once helped me somehow.
 
 ### Artcles
 
@@ -16,4 +16,4 @@ Small commands, usually [one-liners](/one-liners/README.md).
 
 ### Scrips
 
-[scripts](/scrips/README.md) to do very specific tasks
+[scripts](/scripts/README.md) to do very specific tasks
