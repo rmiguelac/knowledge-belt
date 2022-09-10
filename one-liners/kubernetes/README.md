@@ -2,8 +2,8 @@
 
 ## Table of contents
 
-[Get pod init containers](#get-pod-init-containers)  
-[Get pod containers](#get-pod-containers)  
+* [Get pod init containers](#get-pod-init-containers)  
+* [Get pod containers](#get-pod-containers)  
 
 ### Get pod init containers
 

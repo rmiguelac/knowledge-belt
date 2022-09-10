@@ -1,3 +1,5 @@
-## Notes
+# Notes
 
-[kubernetes](/notes/kubernetes/README.md)   
+## Table of Contents
+
+* [kubernetes](/notes/kubernetes/README.md)   
