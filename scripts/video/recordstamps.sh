@@ -20,8 +20,11 @@ capture_frames() {
     INTERVALS=()
     for ((i=0 ; i <= $VIDEO_DURATION ; i+=$SCREENSHOT_INTERVAL)); do
         UTC_FORMAT_TIMESTAMP=$(date -d@${i} -u +%H:%M:%S)
+        TT=${UTC_FORMAT_TIMESTAMP/:/h}
+        TT2=${TT/:/m}
         INTERVALS+=($i)
-        ffmpeg -y -ss $UTC_FORMAT_TIMESTAMP -loglevel quiet -i $VIDEO_FULL_PATH -frames:v 1 -q:v 2 $VIDEO_DIRECTORY/$i.jpg
+        ffmpeg -y -ss $UTC_FORMAT_TIMESTAMP -i $VIDEO_FULL_PATH -loglevel quiet -frames:v 1 -q:v 2 \
+        -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf:fontsize=48:fontcolor=yellow:x=(w-text_w)/2:y=(h-text_h)/20:text='$TT2':expansion=none" $VIDEO_DIRECTORY/$i.jpg
     done
 }
 
