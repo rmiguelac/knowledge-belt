@@ -5,6 +5,7 @@
 * [Cut video from min X to min Y](#cut-video-from-min-x-to-min-y)  
 * [Convert to mp4](#convert-to-mp4)
 * [Create gif from video](#create-gif-from-video)
+* [Take screenshot from last frame](#take-screenshot-from-last-frame)
 ---
 
 ### **Cut video from min X to min Y**
@@ -36,3 +37,9 @@ ffmpeg -r 640 -i VIDEO.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];
 Where `-r` is the frequency, meaning how fast it is.
 
 To cut it in the first X seconds, add `-t X` to the command.
+
+### **Take screenshot from last frame**
+
+```
+ffmpeg -sseof -3 -i ipnut.mp4 -vsync 0 -q:v 31 -update true out.jpg
+```
