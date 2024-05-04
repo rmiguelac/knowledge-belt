@@ -41,5 +41,11 @@ To cut it in the first X seconds, add `-t X` to the command.
 ### **Take screenshot from last frame**
 
 ```
-ffmpeg -sseof -3 -i ipnut.mp4 -vsync 0 -q:v 31 -update true out.jpg
+# Get total seconds
+SECS=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 x.mp4)
+
+# Transform seconds into hh:mm:ss format
+LASTTIME=$(date -d@${SECS} -u +%H:%M:%S)
+
+ffmpeg -ss ${LASTTIME} -i input -frames:v 1 -q:v 2 output.jpg
 ```
